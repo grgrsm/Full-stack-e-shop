@@ -14,11 +14,11 @@ export const Header = () => {
   return (
     <div className="header">
       <div className="header-inner flex justify-between items-center px-5 py-2">
-        <div className="logo h-[56px] w-[200px] flex items-center">
+        <div className="logo h-[56px] flex items-center">
           <span className="font-bold text-xl">Shop</span>
         </div>
 
-        <nav className="navbar">
+        <nav className="navbar w-[300px]">
           <Navbar />
         </nav>
          {userName && (

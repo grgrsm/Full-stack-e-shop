@@ -36,13 +36,19 @@ function HomePage() {
       <NavbarRegistration />
       <Header />
 
-      <div className="p-4 text-center">
+      {/* <div className="p-4 text-center">
         {userName ? (
           <h2 className="text-xl font-bold">Привет, {userName}! 👋</h2>
         ) : (
           <h2 className="text-xl font-bold">Добро пожаловать, гость!</h2>
         )}
-      </div>
+      </div> */}
+     {userName ? (
+  console.log(userName)
+) : (
+  console.log("no user logged in")
+)}
+
 
       {/* Slider: первые 5 товаров */}
       <Slider autoSlide autoSlideInterval={5000}>

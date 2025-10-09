@@ -11,9 +11,9 @@ export const Navbar = () => {
   const [activeItem, setActiveItem] = useState<NavItem>(null);
 
   return (
-    <div className="relative z-40">
+    <div className="relative z-40 w-full">
       <nav
-        className="flex space-x-10 px-8 py-4 text-black text-md z-30 justify-center"
+        className="flex px-8 py-4 text-black text-md z-30 justify-between w-full"
         onMouseDownCapture={() => setActiveItem(null)}
       >
         {(['Коллабы', 'Мужское', 'Женское'] as Exclude<NavItem, null>[]).map((item) => (
@@ -29,11 +29,11 @@ export const Navbar = () => {
 
       {activeItem && (
         <div
-          className="absolute left-0 w-full bg-white h-[250px] shadow-xl z-30"
+          className="fixed top-24 left-0 w-full h-[200px] bg-white shadow-xl z-50" // Устанавливаем fixed для "парящего" меню
           onMouseLeave={() => setActiveItem(null)}
         >
-          <div className="flex justify-center items-start h-full pt-12">
-            <div className="flex flex-col space-y-4 text-black text-sm">
+          <div className="flex justify-center items-start h-full pt-5">
+            <div className="flex flex-row space-y-4 text-black text-sm space-x-4">
               {dropdownContent[activeItem].map((link, i) => (
                 <div key={i} className="font-medium hover:underline cursor-pointer">
                   {link}
