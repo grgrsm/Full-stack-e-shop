@@ -45,7 +45,7 @@ export default function Orders() {
                   {new Date(order.createdAt).toLocaleString()}
                 </p>
               </div>
-              <p className="text-gray-700 mb-2">Сумма: {order.total} ₸</p>
+              <p className="text-gray-700 mb-2">Сумма: {order.total} $</p>
 
               <Link
                 to={`/orders/${order.id}`}
