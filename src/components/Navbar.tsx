@@ -29,11 +29,7 @@ export const Navbar = () => {
 
       {activeItem && (
         <div
-<<<<<<< HEAD
           className="fixed top-24 left-0 w-full h-[200px] bg-white shadow-xl z-50"
-=======
-          className="fixed top-24 left-0 w-full h-[200px] bg-white shadow-xl z-50" // Устанавливаем fixed для "парящего" меню
->>>>>>> b7f7830cb44cfb4bba425c4b0b2c5a405505a955
           onMouseLeave={() => setActiveItem(null)}
         >
           <div className="flex justify-center items-start h-full pt-5">

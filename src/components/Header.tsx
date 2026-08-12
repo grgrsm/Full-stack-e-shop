@@ -15,16 +15,12 @@ export const Header = () => {
     <div className="header">
       <div className="header-inner flex justify-between items-center px-5 py-2">
         <div className="logo h-[56px] flex items-center">
-<<<<<<< HEAD
         <Link
           to="/"
           className=" text-black font-semibold text-lg px-6 py-3 rounded pointer"
         >
           Shop
         </Link>
-=======
-          <span className="font-bold text-xl">Shop</span>
->>>>>>> b7f7830cb44cfb4bba425c4b0b2c5a405505a955
         </div>
 
         <nav className="navbar w-[300px]">
