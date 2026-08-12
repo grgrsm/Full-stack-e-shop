@@ -22,13 +22,12 @@ A modern, full-stack e-commerce web application for a clothing store, built usin
 * **Core:** React 18+ (Functional Components & Hooks)
 * **Language:** TypeScript (Strict type checking)
 * **Styling:** Tailwind CSS (Utility-first, responsive design framework)
-* **State Management:** Context API / Redux Toolkit *(choose your option)*
 
 ### Backend
 
-* **Framework:** NestJS (Progressive Node.js framework)
+* **Framework:** NestJS
 * **Language:** TypeScript
-* **Database:** PostgreSQL / MongoDB *(choose your option)* using TypeORM / Prisma
+* **Database:** PostgreSQL using Prisma
 
 ---
 
@@ -43,12 +42,6 @@ The project is split into two main decoupled modules:
 
 ## Getting Started
 
-### Prerequisites
-
-* Node.js (v18.x or higher)
-* npm or yarn
-* Database instance (PostgreSQL/MongoDB)
-
 ### Installation & Local Setup
 
 ```bash
@@ -59,12 +52,6 @@ cd Full-stack-e-shop
 # Setup Frontend
 yarn install
 yarn run dev
-
-# Setup Backend
-cd ../backend
-yarn install
-# Configure your .env file with database credentials and JWT secret
-yarn run start:dev
 
 ```
 
