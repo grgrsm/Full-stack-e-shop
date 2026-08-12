@@ -1,69 +1,87 @@
-# React + TypeScript + Vite
+Вот готовое, структурированное описание для твоего GitHub-репозитория. Оно написано в классическом профессиональном стиле, который ценят в опенсорс-сообществе и на собеседованиях.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+# E-Commerce Clothing Store
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A modern, full-stack e-commerce web application for a clothing store, built using a highly scalable and robust architecture. The project features a dynamic frontend interface, high-performance styling, secure authentication, and a structured backend API.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* **Responsive UI/UX:** Optimized for mobile, tablet, and desktop viewports.
+* **Product Catalog:** Advanced filtering (by size, color, brand, price range) and sorting functionality.
+* **Shopping Cart & Checkout:** Seamless item management (add, update, remove) with persistent cart states and an intuitive checkout flow.
+* **User Authentication:** Secure JWT-based registration, login, and session persistence.
+* **Interactive Dashboard:** Interactive charts and metrics tracking sales, top products, and user activity.
+* **Admin Panel:** Role-based access control for managing products, categories, inventory, and tracking order statuses.
+* **Visual Assets:** Rich dynamic layouts tailored for retail and fashion showcasing.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Frontend
+
+* **Core:** React 18+ (Functional Components & Hooks)
+* **Language:** TypeScript (Strict type checking)
+* **Styling:** Tailwind CSS (Utility-first, responsive design framework)
+* **State Management:** Context API / Redux Toolkit *(choose your option)*
+
+### Backend
+
+* **Framework:** NestJS (Progressive Node.js framework)
+* **Language:** TypeScript
+* **Database:** PostgreSQL / MongoDB *(choose your option)* using TypeORM / Prisma
+
+---
+
+## Architecture
+
+The project is split into two main decoupled modules:
+
+1. **`/frontend`**: The user interface, client-side routing, global state, and UI components built with React and Tailwind CSS.
+2. **`/backend`**: The RESTful API built with NestJS, following a modular architecture (`AppModule`, `AuthModule`, `ProductsModule`, `OrdersModule`).
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+* Node.js (v18.x or higher)
+* npm or yarn
+* Database instance (PostgreSQL/MongoDB)
+
+### Installation & Local Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/grgrsm/Full-stack-e-shop.git
+cd Full-stack-e-shop
+
+# Setup Frontend
+yarn install
+yarn run dev
+
+# Setup Backend
+cd ../backend
+yarn install
+# Configure your .env file with database credentials and JWT secret
+yarn run start:dev
+
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Future Roadmap / TODOs
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+* [ ] Integrate Stripe/PayPal payment gateways.
+* [ ] Implement advanced analytics widgets for the vendor dashboard.
+* [ ] Add automated visual verification workflows for inventory management.
+* [ ] Set up full CI/CD pipeline deployment.
+
+---
+
+## 📝 License
+
+This project is open source and available under the [MIT License](https://www.google.com/search?q=LICENSE).
